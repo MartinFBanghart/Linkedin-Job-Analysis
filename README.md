@@ -41,6 +41,6 @@ This Pipeline currently requires manual configuration to save each batch. Howeve
 
 This could be achieved on a weekly basis by using a third party task scheduler (such as *Task Till Dawn*) to automate the Extract_Transform.ipynb file
  
-Then, if the datasets were uploaded to an AWS S3 bucket that was also mounted within the DataBricks Workspace to be utilized. The files could be seamlessly integrated.
+The datasets could then be uploaded to an AWS S3 bucket that is mounted within the DataBricks Workspace to be utilized. The files could be seamlessly integrated. (this step may also be simplified further by utilizing a DBFS mount refresh command but some difficulty was encountered when trying to implement this)
  
 All that would be left to do is write code for reading the files from the S3 bucket within the DataBricks notebook and using the schedule option for the notebook.
