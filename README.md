@@ -20,8 +20,9 @@ Intially, the raw datasets will be saved within the same directory as the Extrac
 Now, after intializing a DataBricks Workspace, you must open the cmd prompt of your machine to mount the data to DataBricks via the DataBricks CLI (this was done on windows but similar configurations can be searched for other os)
  
 These commands will then need to be run in the cmd prompt
->> databricks configure --token
->> databricks fs cp "<YOUR-FILE-PATH>\data" dbfs:/mnt/data --recursive
+- databricks configure --token
+  
+- databricks fs cp "<YOUR-FILE-PATH>\data" dbfs:/mnt/data --recursive
   
 change <YOUR-FILE-PATH> to match the path leading to wherever you have the files saved in the 'data' folder
  
