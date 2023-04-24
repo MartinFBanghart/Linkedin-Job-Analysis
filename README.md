@@ -11,12 +11,15 @@ Subsequently, the prepared datasets are then mounted within the DBFS (DataBricks
 
 ## How to Recreate
 
+### Properly Saving Files and Setting up Folder Directory
 To recreate the analysis. You will have to download linkedin_jobscraper.py, text_processor.py, and Extract_Transform.ipynb files into the same folder directory on your local machine. Then, all dependencies must be installed within your python environment. Any empty folder titled 'data' should also be initializied within the same folder directory - this is where all cleaned datasets will be stored after the text_processor functions are applied.
 
+### Scraping and Cleaning the Data
 The Extract_Transform.ipynb notebook can now be run. It is setup for 3 queries already - Data Analyst, Software Engineer, Software Programmer. These can be changed to other tech roles if you believe those positions may require similar software proficiencies. 
 
 Intially, the raw datasets will be saved within the same directory as the Extract_transform.ipynb file and python files as '<query>.csv'. Once the text_processor has been applied as mentioned, these new files will be saved in the /data folder within the overall directory with names in the form of 'clean_<query>.csv'
-  
+
+### Analyzing in DataBricks
 Now, after intializing a DataBricks Workspace, you must open the cmd prompt of your machine to mount the data to DataBricks via the DataBricks CLI (this was done on windows but similar configurations can be searched for other os)
  
 These commands will then need to be run in the cmd prompt
@@ -26,6 +29,8 @@ These commands will then need to be run in the cmd prompt
   
 change (YOUR-FILE-PATH) to match the path leading to wherever you have the files saved in the 'data' folder
  
-Then, in the DataBricks Notebook, you can read the file using this command (instert file name for <file.csv>)
+Then, in the DataBricks Notebook, you can read the file using this command (insert file name for <file.csv>)
 
 df = spark.read.csv("dbfs:/mnt/local/<file.csv>", header=True, inferSchema=True)
+  
+The, simply configure the user defined functions to create Pie Chart and Bigram Box Chart visualizations if your queries varied from the 3 previously defined roles for this project.
