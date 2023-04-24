@@ -6,7 +6,7 @@ This was accomplished by using NLP methods on the job descriptions found for 3 j
 
 Data is first scraped via linkedin_scraper.py and then cleaned and transformed by text_processor.py.
 
-Subsequently, the prepared datasets are then mounted within the DBFS (DataBricks File System) of a DataBricks Workspace to be queried and analyzed using Apache Spark.
+Subsequently, the prepared datasets are then mounted within the DBFS (DataBricks File System) of a DataBricks Workspace to be queried and analyzed using Apache Spark (via PySpark API).
 
 
 ## How to Recreate
