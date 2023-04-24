@@ -22,9 +22,9 @@ Now, after intializing a DataBricks Workspace, you must open the cmd prompt of y
 These commands will then need to be run in the cmd prompt
 - databricks configure --token
   
-- databricks fs cp "<YOUR-FILE-PATH>\data" dbfs:/mnt/data --recursive
+- databricks fs cp "(YOUR-FILE-PATH)\data" dbfs:/mnt/data --recursive
   
-change <YOUR-FILE-PATH> to match the path leading to wherever you have the files saved in the 'data' folder
+change (YOUR-FILE-PATH) to match the path leading to wherever you have the files saved in the 'data' folder
  
 Then, in the DataBricks Notebook, you can read the file using this command (instert file name for <file.csv>)
 
