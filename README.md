@@ -34,3 +34,13 @@ Then, in the DataBricks Notebook, you can read the file using this command (inse
 df = spark.read.csv("dbfs:/mnt/local/<file.csv>", header=True, inferSchema=True)
   
 The, simply configure the user defined functions to create Pie Chart and Bigram Box Chart visualizations if your queries varied from the 3 previously defined roles for this project.
+ 
+### Potential Automation
+
+This Pipeline currently requires manual configuration to save each batch. However, the idea would be setup simple batch streaming with automation.
+
+This could be achieved on a weekly basis by using a third party task scheduler (such as *Task Till Dawn*) to automate the Extract_Transform.ipynb file
+ 
+Then, if the datasets were uploaded to an AWS S3 bucket that was also mounted within the DataBricks Workspace to be utilized. The files could be seamlessly integrated.
+ 
+All that would be left to do is write code for reading the files from the S3 bucket within the DataBricks notebook and using the schedule option for the notebook.
