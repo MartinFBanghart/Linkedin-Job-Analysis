@@ -1,6 +1,6 @@
 # Linkedin-Job-Analysis
 
-This project was created to determine insights for job postings made on Linkedin.com. Specifically, this project aimed to build an ETL pipeline to build out a database of job tech job postings in an effort to understand the most desired and requested programming languages, database platforms, and cloud/distributed computing platforms sought by employers.
+This project was created to determine insights for job postings made on Linkedin.com. Specifically, this project aimed to create an ETL pipeline to build out a database of tech job postings in an effort to understand the most desired and requested programming languages, database platforms, and cloud/distributed computing platforms sought by employers.
 
 This was accomplished by using NLP methods on the job descriptions found for 3 job roles (Data Analyst, Software Engineer, Software Programmer). 
 
